@@ -27,7 +27,7 @@ const Homepage = () => {
               </div>
               <div className="coin-name">
                 {coin.name}
-                <i>
+                <i className="arrow-icon">
                   <Icon icon={arrowCircleRight} size={20} />
                 </i>
               </div>

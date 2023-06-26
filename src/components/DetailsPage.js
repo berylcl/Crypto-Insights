@@ -29,9 +29,9 @@ const DetailsPage = () => {
   return (
     <div className="details-container">
       <div className="coin-details">
-        <Link to="/" className="back-btn">
+        <Link to="/" className="back-icon">
           <Icon icon={circleLeft} size={20} />
-          <span>Back to List</span>
+          <span>BACK</span>
         </Link>
         <div className="coin-info">
           <img src={currentCoin.icon} alt={currentCoin.name} />

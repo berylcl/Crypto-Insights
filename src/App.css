@@ -43,13 +43,39 @@ body {
   width: 200px;
   height: 9.375rem;
   border-radius: 5px;
-  box-shadow: 9px 10px 12px 0 rgba(13,12,13,0.75);
-  -webkit-box-shadow: 9px 10px 12px 0 rgba(13,12,13,0.75);
-  -moz-box-shadow: 9px 10px 12px 0 rgba(13,12,13,0.75);
+  box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
+  -webkit-box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
+  -moz-box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
   text-align: center;
   padding: 10px;
 }
 
 .coin-name {
   margin-top: 10px;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+  align-items: center;
+}
+
+.coin-info {
+  text-align: center;
+}
+
+.coin-data div {
+  display: flex;
+  padding: 1.25rem;
+  justify-content: space-between;
+  background-color: #e51daa;
+}
+
+.coin-data div:nth-child(2n-2) {
+  background-color: #9f0d72;
+}
+
+.back-icon {
+  font-size: 1.6rem;
 }
