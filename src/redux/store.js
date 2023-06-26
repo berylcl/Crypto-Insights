@@ -3,10 +3,10 @@ import logger from 'redux-logger';
 import { coinReducer } from './reducers';
 
 const store = configureStore({
-    reducer: {
-        coins: coinReducer,
-    },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  reducer: {
+    coins: coinReducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
