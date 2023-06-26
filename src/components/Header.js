@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React from 'react';
 
-const Header = () => {
-
-    return (
-        <header>
-            <Link to="/">
-                <div className="logo">
-                    <span>CRYPTO CURRENCIES</span>
-                </div>
-            </Link>
-        </header>
-    );
-};
+const Header = () => (
+  <header>
+    <div className="logo">
+      <span>CRYPTO CURRENCIES</span>
+    </div>
+  </header>
+);
 
 export default Header;

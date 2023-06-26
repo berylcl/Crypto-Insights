@@ -1,38 +1,81 @@
-.App {
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #f024d5;
+}
+
+.card img {
+  width: 100px;
+}
+
+.logo {
+  font-size: 60px;
+  font-weight: 700;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coin-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 9.375rem;
+  border-radius: 5px;
+  box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
+  -webkit-box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
+  -moz-box-shadow: 9px 10px 12px 0 rgba(13, 12, 13, 0.75);
+  text-align: center;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.coin-name {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+  align-items: center;
+}
+
+.coin-info {
+  text-align: center;
+}
+
+.coin-data div {
+  display: flex;
+  padding: 1.25rem;
+  justify-content: space-between;
+  background-color: #e51daa;
+}
+
+.coin-data div:nth-child(2n-2) {
+  background-color: #9f0d72;
+}
+
+.back-icon {
+  font-size: 1.6rem;
 }
