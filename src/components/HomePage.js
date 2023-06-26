@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Coin from './Coin';
+import { arrowCircleRight } from 'react-icons-kit/fa/arrowCircleRight';
+import Icon from 'react-icons-kit';
 import { fetchCoins } from '../redux/reducers';
+import '../App.css';
 
 const Homepage = () => {
   const coinState = useSelector((state) => state.coins);
@@ -16,19 +18,25 @@ const Homepage = () => {
 
   return (
     <div className="coin-list-container" data-testid="homepage">
-      <div className="card-container">
-        {coinState.map((coin) => (
-          <Link key={coin.id} to={`/${coin.id}`}>
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              symbol={coin.symbol}
-              icon={coin.icon}
-            />
-          </Link>
-        ))}
-      </div>
+      {coinState.map((coin, index) => (
+        <Link key={coin.id} to={`/${coin.id}`}>
+          <div className={`card-container ${index % 2 === 0 ? 'even' : 'odd'}`}>
+            <div className="card">
+              <div className="coin-icon">
+                <img src={coin.icon} alt={coin.symbol} />
+              </div>
+              <div className="coin-name">
+                {coin.name}
+                <i>
+                  <Icon icon={arrowCircleRight} size={20} />
+                </i>
+              </div>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
+
   );
 };
 
