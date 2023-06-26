@@ -28,15 +28,26 @@ body {
 .coin-list-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .card {
-  width: 500px;
-  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 9.375rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.712);
+  text-align: center;
   padding: 10px;
-  max-width: 500px;
 }
 
 .coin-name {
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 10px;
 }
